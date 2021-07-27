@@ -19,7 +19,7 @@ public class CachbackServiceTestNG {
 
     @Test
     public void shouldCalculateIf1001Positive() {
-        assertEquals(service.remain(1001), 0); //а в итоге предлагает закупить еще на 999р
+        assertEquals(service.remain(1001), 999);
     }
 
     @Test
