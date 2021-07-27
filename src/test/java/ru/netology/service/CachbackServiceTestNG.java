@@ -14,12 +14,12 @@ public class CachbackServiceTestNG {
 
     @Test
     public void shouldCalculateIf1000Positive() {
-        assertEquals(service.remain(1000), 1000); //кажется, это обещанный баг
+        assertEquals(service.remain(1000), 0); //кажется, это обещанный баг
     }
 
     @Test
     public void shouldCalculateIf1001Positive() {
-        assertEquals(service.remain(1001), 999); // зачем нам предлагает закупить на 999р, если у нас уже выше границы?
+        assertEquals(service.remain(1001), 0); //а в итоге предлагает закупить еще на 999р
     }
 
     @Test
